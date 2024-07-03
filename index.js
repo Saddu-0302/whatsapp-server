@@ -11,7 +11,7 @@ mongoose.connect(process.env.MONGO_URL)
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "https://client-teal-seven.vercel.app/",
     credentials: true
 }))
 
