@@ -12,6 +12,7 @@ exports.updateProfile = asyncHandler(async (req, res) => {
         }
 
         const { auth } = req.cookies
+        console.log(auth);
         if (!auth) {
             return res.status(401).json({ message: "Non Cookie Found" })
         }

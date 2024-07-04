@@ -102,5 +102,5 @@ exports.updateSeen = asyncHandler(async (req, res) => {
     })
     await Message.updateMany({ chat: chat._id, seen: false }, { $set: { seen: true } })
     io.to(user1._id).emit("send-responce", user2)
-    res.status(200).json({ message: "Message Seen Success", result })
+    res.status(200).json({ message: "Message Seen Success" })
 })
